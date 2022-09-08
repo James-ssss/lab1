@@ -36,5 +36,13 @@ namespace lab1
             }
             return result;
         }
+        /// <summary>
+        /// Печатает строку n раз
+        /// </summary>
+        public static void Const(int N)
+        {
+            for (var i = 0; i < N; i++)
+                Console.WriteLine("tra ta ta");
+        }
     }
 }
