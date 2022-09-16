@@ -8,20 +8,21 @@ class Program
     {
         List<string> outputData = new();
         outputData.Add(new string("Pow" + "\t" + "Count steps"));
-       (string Pow, string Count) result = new();
-        for (int i = 1; i <= 50; i += 10)
+       (int Pow, int Count) result = new();
+        for (int i = 0; i <= 15; i += 1)
         {
-            if (i == 11)
+            if (i == 0)
             {
-                i -= 1;
-               result = SimpleExponentiation.PowFunc(5, i);
+                continue;
             }
             else
             {
-               result = SimpleExponentiation.PowFunc(5, i);
+               result = SimpleExponentiation.PowFunc(2, i);
             }
-            outputData.Add(result.Pow + "\t" + result.Count);
+            outputData.Add(result.Pow.ToString() + "\t" + result.Count.ToString());
         }
-        File.WriteAllLines("..//..//..//results/8/8.1_result.txt", outputData);  
+        File.WriteAllLines("..//..//..//results/8/8.1_result.txt", outputData);
+        // var res = SimpleExponentiation.PowFunc(2, 1);
+        // Console.WriteLine(res.Count + " " + res.Pow );
     }
 }

@@ -11,7 +11,7 @@ public class SimpleExponentiation
 /// <param name="value">Значение, которое возводится в степень</param>
 /// <param name="pow">Степень, в которую нужно возвести значение</param>
 /// <returns></returns>
-    public static (string Pow,string Count) PowFunc(ulong value, int pow)
+    public static (int Pow,int Count) PowFunc(ulong value, int pow)
     {    
         countSteps += 1;
         BigInteger result;
@@ -23,6 +23,6 @@ public class SimpleExponentiation
             countSteps += 1;
             result *= value;
         }
-        return (pow.ToString(),countSteps.ToString());
+        return (pow,countSteps);
     }
 }
