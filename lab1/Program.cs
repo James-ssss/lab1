@@ -13,9 +13,9 @@ class Program
 
         for (int i = 0; i <= 100; i += 5)
         {
-            result = QuickExponentiation.Exponentiate(8, i);
+            result = ClassicQuickExponentiation.Exponentiate(2, i);
             outputData.Add(result.Pow.ToString() + "\t" + result.Count.ToString());
         }
-        File.WriteAllLines("..//..//..//results/8/8.3_result.txt", outputData);
+        File.WriteAllLines("..//..//..//results/8/8.4_result.txt", outputData);
     }
 }
