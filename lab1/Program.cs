@@ -9,16 +9,13 @@ class Program
         List<string> outputData = new();
         outputData.Add(new string("Pow" + "\t" + "Count steps"));
 
-        (int Pow, BigInteger Value) result = new();
+        (int Pow, int Count) result = new();
 
         for (int i = 0; i <= 100; i += 5)
         {
-            result = RecursiveExponentiation.Exponentiate(2, i);
-            outputData.Add(result.Pow.ToString() + "\t" + RecursiveExponentiation.CountSteps.ToString());
-            RecursiveExponentiation.CountSteps = 0;
+            result = QuickExponentiation.Exponentiate(8, i);
+            outputData.Add(result.Pow.ToString() + "\t" + result.Count.ToString());
         }
-
-       File.WriteAllLines("..//..//..//results/8/8.2_result.txt", outputData);
-
+        File.WriteAllLines("..//..//..//results/8/8.3_result.txt", outputData);
     }
 }
