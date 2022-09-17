@@ -34,7 +34,7 @@ class Program
         {
             for (int i = 200; i < 10000; i+=25)
             {
-                int[] vector = VectorGeneration.GetNewVector(i, 1, 9);
+                int[] vector = Generation.GetNewVector(i, 1, 9);
                 timer.Start();
                 //VectorOperations.Const(); //1.1
                 //result = VectorOperations.Sum(vector); //1.2

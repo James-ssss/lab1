@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace lab1.Algorithms
 {
-    internal class BubbleSort
+    public class BubbleSort
     {
+
     }
 }
