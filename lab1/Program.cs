@@ -6,16 +6,19 @@ class Program
 { 
     static void Main()
     {
-        List<string> outputData = new();
-        outputData.Add(new string("Pow" + "\t" + "Count steps"));
-
-        (int Pow, int Count) result = new();
-
-        for (int i = 0; i <= 100; i += 5)
+        int maxLength = 100000;
+        StreamWriter f = new StreamWriter("..//..//..//results/III/QuickRecursiveSort_3.txt");
+        for (int i = 1; i <= maxLength; i += 500)
         {
-            result = ClassicQuickExponentiation.Exponentiate(2, i);
-            outputData.Add(result.Pow.ToString() + "\t" + result.Count.ToString());
+            var v = VectorGeneration.GetNewVector(i, 1, 1000);
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            var m = QuickRecursiveSort.QuickSort(v, 0, i - 499);
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+            f.WriteLine(stopwatch.Elapsed.TotalMilliseconds);
         }
-        File.WriteAllLines("..//..//..//results/8/8.4_result.txt", outputData);
+        f.Close();
     }
 }

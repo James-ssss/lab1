@@ -29,4 +29,41 @@
     <None Remove="BenchmarkDotNet.Artifacts\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="results\III\QuickRecursiveSort_5.txt">
+      <LastGenOutput>QuickRecursiveSort_5.cs</LastGenOutput>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <AutoGen>True</AutoGen>
+    </None>
+    <None Update="results\III\QuickRecursiveSort_4.txt">
+      <LastGenOutput>QuickRecursiveSort_4.cs</LastGenOutput>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <AutoGen>True</AutoGen>
+    </None>
+    <None Update="results\III\QuickRecursiveSort_3.txt">
+      <LastGenOutput>QuickRecursiveSort_3.cs</LastGenOutput>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <AutoGen>True</AutoGen>
+    </None>
+    <None Update="results\III\QuickRecursiveSort_2.txt">
+      <LastGenOutput>QuickRecursiveSort_2.cs</LastGenOutput>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <AutoGen>True</AutoGen>
+    </None>
+    <None Update="results\III\QuickRecursiveSort_1.txt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuickRecursiveSort_1.cs</LastGenOutput>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
 </Project>

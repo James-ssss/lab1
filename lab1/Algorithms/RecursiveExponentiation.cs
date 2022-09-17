@@ -15,7 +15,7 @@ namespace lab1.Algorithms
         /// </summary>
         /// <param name="value">Значение, которое возводится в степень.</param>
         /// <param name="pow">Степень, в которую нужно возвести значение.</param>
-        /// <returns>Возвращается первым степень, в которую возводится число. Вторым количество шагов, которое проходится алгоритмом./returns>
+        /// <returns>Возвращается первым степень, в которую возводится число. Вторым число, для корректной работы алгоримта./returns>
         public static (int pow, BigInteger value) Exponentiate(int value, int pow)
         {
             if (pow == 0)

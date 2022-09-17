@@ -8,7 +8,12 @@ using System.Threading.Tasks;
 namespace lab1.Algorithms
 {
     public class QuickExponentiation
-    {
+    { /// <summary>
+      /// Алгоритм быстрого возведения в степень.
+      /// </summary>
+      /// <param name="value">Значение, которое возводится в степень.</param>
+      /// <param name="pow">Степень, в которую нужно возвести значение.</param>
+      /// <returns>Возвращается первым степень, в которую возводится число. Вторым количество шагов, которое проходится алгоритмом./returns>
         public static (int Pow, int Count) Exponentiate(int value, int pow)
         {
             int countSteps = 0;
