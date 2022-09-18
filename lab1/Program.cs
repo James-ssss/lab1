@@ -6,14 +6,14 @@ class Program
 { 
     static void Main()
     {
-        int maxLength = 100000;
-        StreamWriter f = new StreamWriter("..//..//..//results/III/QuickRecursiveSort_3.txt");
-        for (int i = 1; i <= maxLength; i += 500)
+        int maxLength = 1000000;
+        StreamWriter f = new StreamWriter("..//..//..//results/III/QuickRecursiveSort_5.txt");
+        for (int i = 1; i <= maxLength; i += 5000)
         {
             var v = VectorGeneration.GetNewVector(i, 1, 1000);
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            var m = QuickRecursiveSort.QuickSort(v, 0, i - 499);
+            BucketSort.Sort(v);
             stopwatch.Stop();
 
             TimeSpan ts = stopwatch.Elapsed;
