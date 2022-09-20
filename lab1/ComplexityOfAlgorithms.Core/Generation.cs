@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
     public static class Generation
     {
@@ -21,9 +21,9 @@ namespace lab1.Algorithms
             int[] vector = new int[length];
             for (int i = 0; i < length; i++)
             {
-                vector[i] = rnd.Next(firstNum,secondNum);
+                vector[i] = rnd.Next(firstNum, secondNum);
             }
-            
+
             return vector;
         }
 
@@ -36,7 +36,7 @@ namespace lab1.Algorithms
                 for (int j = 0; j < length; j++)
                 {
                     array[i, j] = rnd.Next(leftNum, rightNum);
-                    
+
                 }
 
             }

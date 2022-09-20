@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace lab1.Algorithms;
+namespace СomplexityOfAlgorithms.Algorithms;
 
 public class SimpleExponentiation
 {
@@ -10,7 +10,7 @@ public class SimpleExponentiation
     /// <param name="value">Значение, которое возводится в степень.</param>
     /// <param name="pow">Степень, в которую нужно возвести значение.</param>
     /// <returns>Возвращается первым степень, в которую возводится число. Вторым количество шагов, которое проходится алгоритмом./returns>
-    public static (int Pow,int Count) Exponentiate(ulong value, int pow)
+    public static (int Pow, int Count) Exponentiate(ulong value, int pow)
     {
         int countSteps = 0;
         BigInteger result;
@@ -24,6 +24,6 @@ public class SimpleExponentiation
             result *= value;
         }
 
-        return (pow,countSteps);
+        return (pow, countSteps);
     }
 }

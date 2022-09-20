@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
     public static class VectorOperations
     {

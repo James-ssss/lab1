@@ -1,6 +1,6 @@
-namespace lab1.Algorithms;
+namespace ÑomplexityOfAlgorithms.Algorithms;
 
 public class Timsort
 {
-    
+
 }

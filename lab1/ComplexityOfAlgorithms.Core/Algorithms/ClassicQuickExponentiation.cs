@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.Algorithms
 {
     public class ClassicQuickExponentiation
     { /// <summary>
@@ -14,7 +14,7 @@ namespace lab1.Algorithms
       /// <param name="value">Значение, которое возводится в степень.</param>
       /// <param name="pow">Степень, в которую нужно возвести значение.</param>
       /// <returns>Возвращается первым степень, в которую возводится число. Вторым количество шагов, которое проходится алгоритмом./returns>
-        public static (int Pow, int Count) Exponentiate(int value,int pow)
+        public static (int Pow, int Count) Exponentiate(int value, int pow)
         {
             int countSteps = 3;
             int c = value;
@@ -38,7 +38,7 @@ namespace lab1.Algorithms
                 }
             }
             countSteps += 1;
-            return (pow,countSteps);
+            return (pow, countSteps);
         }
     }
 }

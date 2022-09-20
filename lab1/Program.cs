@@ -1,7 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Numerics;
-
-using lab1.Algorithms;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 

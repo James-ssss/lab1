@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
-    public class QuickSort
+    public interface IExecutable
     {
-
+        public abstract void Execute();
     }
 }

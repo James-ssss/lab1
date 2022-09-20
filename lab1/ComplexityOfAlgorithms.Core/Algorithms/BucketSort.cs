@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.Algorithms
 {
     public class BucketSort : ILogic
     {
@@ -17,13 +17,13 @@ namespace lab1.Algorithms
         {
             Console.WriteLine("Введите максимальную длину массива");
             int maxLength = int.Parse(Console.ReadLine());
-            for (int i = 1; i<=5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 string path = $"..//..//..//results/III/QuickRecursiveSort_{i}.txt";
                 StreamWriter f = new StreamWriter(path);
                 for (int j = 1; j <= maxLength; j += 5000)
                 {
-                    var v = VectorGeneration.GetNewVector(j, 1, 1000);
+                    var v = Generation.GetNewVector(j, 1, 1000);
                     Stopwatch stopwatch = new Stopwatch();
                     stopwatch.Start();
                     BucketSort.Sort(v);

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab1.Algorithms
+namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
     public class MatrixOperations
     {
         public static int[,] MultiplicationMatrix(int[,] firstMatrix, int[,] secondMatrix)
         {
-            var resultMatrix = new int[firstMatrix.GetUpperBound(0)+1, secondMatrix.GetUpperBound(1)+1];
+            var resultMatrix = new int[firstMatrix.GetUpperBound(0) + 1, secondMatrix.GetUpperBound(1) + 1];
 
             for (int i = 0; i < firstMatrix.GetLength(0); i++)
             {
