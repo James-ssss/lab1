@@ -1,14 +1,43 @@
-﻿using System;
+﻿using BenchmarkDotNet.Toolchains.Parameters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 
 namespace СomplexityOfAlgorithms.Algorithms
 {
-    public class RecursiveExponentiation
+    public class RecursiveExponentiation :IExecutable
     {
+        public void Execute()
+        {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали рекурсивный алгоритм возведения в степень.");
+            List<string> outputData = new();
+            outputData.Add(new string("Pow" + "\t" + "Count steps"));
+            (int Pow, BigInteger Value) result = new();
+            for (int i = 1; i <= 100; i += 5)
+            {
+                if (i == 11)
+                {
+                    i -= 1;
+                    result = RecursiveExponentiation.Exponentiate(5, i);
+                }
+                else
+                {
+                    result = RecursiveExponentiation.Exponentiate(5, i);
+                }
+                outputData.Add(result.Pow + "\t" + CountSteps);
+                CountSteps = 0;
+            }
+            File.WriteAllLines("..//..//..//results/8/8.2_result.txt", outputData);
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
+        }
+
         public static int CountSteps = 0;
         /// <summary>
         /// Рекурсивный алгоритм возведения числа в степень.

@@ -1,9 +1,35 @@
 ﻿using System.Numerics;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 
 namespace СomplexityOfAlgorithms.Algorithms;
 
-public class SimpleExponentiation
+public class SimpleExponentiation : IExecutable
 {
+    public void Execute()
+    {
+        ConsoleHelper.ClearScreen();
+        Console.WriteLine("Вы выбрали простой алгоритм возведения в степень.");
+        List<string> outputData = new();
+        outputData.Add(new string("Pow" + "\t" + "Count steps"));
+        (int Pow, int Count) result = new();
+        for (int i = 1; i <= 100; i += 5)
+        {
+            if (i == 11)
+            {
+                i -= 1;
+                result = SimpleExponentiation.Exponentiate(5, i);
+            }
+            else
+            {
+                result = SimpleExponentiation.Exponentiate(5, i);
+            }
+            outputData.Add(result.Pow + "\t" + result.Count);
+        }
+        File.WriteAllLines("..//..//..//results/8/8.1_result.txt", outputData);
+        ConsoleHelper.ClearScreen();
+        Console.WriteLine("Файлы успешно созданы");
+    }
     /// <summary>
     /// Простой алгоритм возведения в степень. 
     /// </summary>

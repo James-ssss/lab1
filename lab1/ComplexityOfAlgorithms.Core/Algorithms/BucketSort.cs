@@ -11,7 +11,7 @@ using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 
 namespace СomplexityOfAlgorithms.Algorithms
 {
-    public class BucketSort : ILogic
+    public class BucketSort : IExecutable
     {
         public void Execute()
         {

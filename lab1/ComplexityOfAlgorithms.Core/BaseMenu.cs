@@ -39,7 +39,7 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
                     Console.BackgroundColor = ConsoleColor.Gray;
                     Console.ForegroundColor = ConsoleColor.Black;
                 }
-                Console.WriteLine(items[i].Text);
+                Console.WriteLine(items[i].Title);
 
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.BackgroundColor = ConsoleColor.White;
