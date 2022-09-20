@@ -12,7 +12,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="results\1.2\" />
+    <Compile Remove="results\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="results\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="results\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="results\1.6" />
+    <Folder Include="results\III" />
   </ItemGroup>
 
 </Project>
