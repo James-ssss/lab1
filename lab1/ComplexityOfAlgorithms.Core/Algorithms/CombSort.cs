@@ -23,7 +23,7 @@ namespace СomplexityOfAlgorithms.Algorithms
                     timer.Start();
 
                     /////////////////////
-                    ulong gap = (ulong)vector.Length;
+                    ulong gap = (ulong)vector.Length;   
                     bool swapped = false;
                     while (gap > 1 || swapped)
                     {

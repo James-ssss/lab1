@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
 
 namespace СomplexityOfAlgorithms.Algorithms
 {
-    public class BubbleSort
+    public class BubbleSort : IExecutable
     {
         public static int[] BubbSort(int[] vector)
         {

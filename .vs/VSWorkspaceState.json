@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lab1",
+    "\\lab1\\ComplexityOfAlgorithms.ConsoleUI",
+    "\\lab1\\ComplexityOfAlgorithms.Core",
+    "\\lab1\\ComplexityOfAlgorithms.Core\\Algorithms",
+    "\\lab1\\results"
   ],
+  "SelectedNode": "\\lab1\\lab1.csproj",
   "PreviewInSolutionExplorer": false
 }
