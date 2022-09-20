@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Numerics;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 
 namespace lab1.Algorithms
 {
@@ -12,6 +14,8 @@ namespace lab1.Algorithms
     {
         public void Execute()
         {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали сортировку расческой.");
             var timer = new Stopwatch();
             List<string> milliSec = new();
             for (int j = 1; j <= 5; j++)
@@ -58,6 +62,8 @@ namespace lab1.Algorithms
 
                 milliSec.Clear();
             }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
 
         }
 

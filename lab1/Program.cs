@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using lab1.Algorithms;
+using System.Diagnostics;
 using System.Numerics;
 using СomplexityOfAlgorithms.Algorithms;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
@@ -14,6 +15,10 @@ class Program
     const string CombSort = "Сортировка расческой";
     const string PlynomialCalculation = "Прямое (наивное) вычисление полинома";
     const string PolynomialCalculationByHorner = "Вычисление полинома методом Горнера";
+    const string MatrixMultiplication = "Умножение матриц";
+    const string BubbleSort = "Сортировка пузырьком";
+    const string InsertionSort = "Сортировка вставками";
+    const string QuickSort = "Быстрая сортировка";
     const string Exit = "Выход";
     static void Main(string[] args)
     {
@@ -28,6 +33,10 @@ class Program
                 new MenuItem{Title = CombSort},
                 new MenuItem{Title = PlynomialCalculation},
                 new MenuItem{Title = PolynomialCalculationByHorner},
+                new MenuItem{Title = MatrixMultiplication},
+                new MenuItem{Title = BubbleSort},
+                new MenuItem{Title = InsertionSort},
+                new MenuItem{Title = QuickSort},
                 new MenuItem{Title = Exit},
             };
 
@@ -91,6 +100,26 @@ class Program
                         case PolynomialCalculationByHorner:
                             Polynom pcby = new Polynom();
                             pcby.ExecutePGorner();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case MatrixMultiplication:
+                            MatrixOperations mo = new MatrixOperations();
+                            mo.ExecuteMultiplication();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case BubbleSort:
+                            BubbleSort bs = new BubbleSort();
+                            bs.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case InsertionSort:
+                            InsertionSort iss = new InsertionSort();
+                            iss.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case QuickSort:
+                            QuickSort qs = new QuickSort();
+                            qs.Execute();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case Exit:

@@ -1,7 +1,35 @@
+using System.Diagnostics;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
+
 namespace СomplexityOfAlgorithms.Algorithms;
 
 public class InsertionSort
 {
+    public void Execute()
+    {
+        ConsoleHelper.ClearScreen();
+        Console.WriteLine("Вы выбрали сортировку вставками.");
+        for (int i = 1; i <= 5; i++)
+        {
+            string path = $"..//..//..//results/III/InsertionSort_{i}.txt";
+            StreamWriter f = new StreamWriter(path);
+            for (int j = 1; j <= 4000; j += 20)
+            {
+                var v = Generation.GetNewVector(j, 1, 1000);
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                InsertionSort.InsertSort(v);
+                stopwatch.Stop();
+
+                TimeSpan ts = stopwatch.Elapsed;
+                f.WriteLine(stopwatch.Elapsed.TotalMilliseconds);
+            }
+            f.Close();
+        }
+        ConsoleHelper.ClearScreen();
+        Console.WriteLine("Файлы успешно созданы");
+    }
     public static void Swap(int[] array, int i, int j)
     {
         int temp = array[i];

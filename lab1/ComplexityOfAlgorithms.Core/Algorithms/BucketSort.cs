@@ -23,7 +23,7 @@ namespace СomplexityOfAlgorithms.Algorithms
             {
                 string path = $"..//..//..//results/III/BucketSort_{i}.txt";
                 StreamWriter f = new StreamWriter(path);
-                for (int j = 1; j <= maxLength; j += 5000)
+                for (int j = 1; j <= maxLength; j += 500)
                 {
                     var v = Generation.GetNewVector(j, 1, 1000);
                     Stopwatch stopwatch = new Stopwatch();

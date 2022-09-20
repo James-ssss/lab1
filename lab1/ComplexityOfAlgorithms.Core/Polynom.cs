@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 
 namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
@@ -39,6 +40,8 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 
         public void ExecuteP()
         {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали прямое (наивное) вычисление полинома.");
             var timer = new Stopwatch();
             List<string> milliSec = new();
             for (int j = 1; j <= 5; j++)
@@ -63,10 +66,14 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
                 File.WriteAllLines($"..//..//..//results/1.4.1/1_4_1_{j}_result.txt", milliSec); //1.4.1
 
                 milliSec.Clear();
+                ConsoleHelper.ClearScreen();
+                Console.WriteLine("Файлы успешно созданы");
             }
         }
         public void ExecutePGorner()
         {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали вычисление полинома методом Горнера.");
             var timer = new Stopwatch();
             List<string> milliSec = new();
             for (int j = 1; j <= 5; j++)
@@ -92,7 +99,10 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 
                 milliSec.Clear();
             }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
         }
+
 
     }
 }
