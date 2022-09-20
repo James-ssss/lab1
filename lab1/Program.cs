@@ -37,5 +37,17 @@ class Program
             }
         } while (true);
 
+                timer.Stop();
+                milliSec.Add(timer.Elapsed.TotalMilliseconds.ToString());
+                timer.Reset();
+
+            }
+            //File.WriteAllLines($"..//..//..//results/1.1/1_1_{j}_result.txt", milliSec); //1.1
+            //File.WriteAllLines($"..//..//..//results/1.2/1_2_{j}_result.txt", milliSec); //1.2
+            File.WriteAllLines($"..//..//..//results/1.3/1_3_{j}_result.txt", milliSec); //1.3
+            
+            milliSec.Clear();
+        }
+       
     }
 }
