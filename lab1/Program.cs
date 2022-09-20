@@ -19,6 +19,9 @@ class Program
     const string BubbleSort = "Сортировка пузырьком";
     const string InsertionSort = "Сортировка вставками";
     const string QuickSort = "Быстрая сортировка";
+    const string ConstantFunction = "Постоянная функция";
+    const string SumOfElements = "Сумма элементов";
+    const string ProductOfElements = "Произведение элементов";
     const string Exit = "Выход";
     static void Main(string[] args)
     {
