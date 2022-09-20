@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 
 namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
@@ -51,6 +52,8 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
         }
         public void ExecuteSum()
         {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали сортировку вставками.");
             var timer = new Stopwatch();
             long result = 0;
         
@@ -73,9 +76,14 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
                 File.WriteAllLines($"..//..//..//results/1.2/1_2_{j}_result.txt", milliSec); //1.2
                 milliSec.Clear();
             }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
         }
         public void ExecuteMul()
         {
+
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали сортировку вставками.");
             var timer = new Stopwatch();
             long result = 0;
         
@@ -97,9 +105,13 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
             
                 milliSec.Clear();
             }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
         }
         public void ExecuteConst()
         {
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали сортировку вставками.");
             var timer = new Stopwatch();
             long result = 0;
         
@@ -120,6 +132,8 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
                 File.WriteAllLines($"..//..//..//results/1.1/1_1_{j}_result.txt", milliSec); //1.1
                 milliSec.Clear();
             }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
         }
 
 

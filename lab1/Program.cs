@@ -28,6 +28,9 @@ class Program
 
         List<MenuItem> mainMenu = new List<MenuItem>
             {
+                new MenuItem{Title = ConstantFunction},
+                new MenuItem{Title = SumOfElements},
+                new MenuItem{Title = ProductOfElements},
                 new MenuItem{Title = BucketSort},
                 new MenuItem{Title = SimpleExponentiation},
                 new MenuItem{Title = RecursiveExponentiation},
@@ -123,6 +126,21 @@ class Program
                         case QuickSort:
                             QuickSort qs = new QuickSort();
                             qs.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case ConstantFunction:
+                            BubbleSort cf = new BubbleSort();
+                            cf.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case SumOfElements:
+                            InsertionSort sof = new InsertionSort();
+                            sof.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
+                        case ProductOfElements:
+                            QuickSort pof = new QuickSort();
+                            pof.Execute();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case Exit:
