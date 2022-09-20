@@ -8,7 +8,7 @@ namespace lab1.Algorithms
 {
     public class MatrixOperations
     {
-        private static int[,] MultiplicationMatrix(int[,] firstMatrix, int[,] secondMatrix)
+        public static int[,] MultiplicationMatrix(int[,] firstMatrix, int[,] secondMatrix)
         {
             var resultMatrix = new int[firstMatrix.GetUpperBound(0)+1, secondMatrix.GetUpperBound(1)+1];
 

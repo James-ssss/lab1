@@ -35,7 +35,7 @@ namespace lab1.Algorithms
             {
                 for (int j = 0; j < length; j++)
                 {
-                    array[i, j] = rnd.Next(length, rightNum);
+                    array[i, j] = rnd.Next(leftNum, rightNum);
                     
                 }
 

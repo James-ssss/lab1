@@ -7,25 +7,6 @@ class Program
     static void Main()
     {
         /*var timer = new Stopwatch();
-        var vector = VectorGeneration.GetNewVector(100, 1, 9);
-        List<string> milliSec = new();
-        Console.WriteLine("Введите ранг матрицы: ");
-        var N = int.Parse(Console.ReadLine());
-        
-       
-        for (int i = 0; i < 5; i++)
-        {
-            
-            timer.Start();
-            // тута должен быть алгоритм умножения матриц
-            timer.Stop();
-            milliSec.Add(timer.ElapsedMilliseconds.ToString());
-            timer.Reset();
-
-        }
-        File.WriteAllLines("..//..//..//2_result.txt", milliSec);*/
-
-        var timer = new Stopwatch();
         long result = 0;
         
 
@@ -49,7 +30,38 @@ class Program
             File.WriteAllLines($"..//..//..//results/1.3/1_3_{j}_result.txt", milliSec); //1.3
             
             milliSec.Clear();
-        }
-       
+        }*/
+
+        //2
+        /*var timer = new Stopwatch();
+        List<string> milliSec = new();
+        for (int z = 1; z <= 5; z++)
+        {
+            StreamWriter f = new StreamWriter($"..//..//..//results/2/2_1_{z}_result.txt", true);
+            for (int i = 1; i <= 100; i+=5)
+            {
+                for (int j = 1; j <= 100; j+=5)
+                {
+                    int[,] A = Generation.GetNewMatrix(i, j, 1, 9);
+                    int[,] B = Generation.GetNewMatrix(j, i, 1, 9);
+                    timer.Start();
+                    
+                    var resultAB = MatrixOperations.MultiplicationMatrix(A, B);
+                    
+                    timer.Stop();
+                    milliSec.Add(timer.Elapsed.TotalMilliseconds.ToString());
+                    
+                    timer.Stop();
+                }
+                f.WriteLine(String.Join(' ', milliSec));
+                milliSec.Clear();
+            }
+            f.Close();
+        }*/
+        //var cs = new CombSort();
+        //cs.Execute();
+        var polynom = new Polynom();
+        polynom.Execute();
+
     }
 }
