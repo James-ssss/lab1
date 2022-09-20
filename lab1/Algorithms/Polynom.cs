@@ -88,7 +88,7 @@ namespace lab1.Algorithms
 
                 }
 
-                File.WriteAllLines($"..//..//..//results/1.4.2/1_4_2_{j}_result.txt", milliSec); //1.4.1
+                File.WriteAllLines($"..//..//..//results/1.4.2/1_4_2_{j}_result.txt", milliSec); //1.4.2
 
                 milliSec.Clear();
             }

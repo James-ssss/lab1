@@ -17,6 +17,7 @@
     <Folder Include="results\2\" />
     <Folder Include="results\3\" />
     <Folder Include="results\1.4.2\" />
+    <Folder Include="results\1.7\" />
   </ItemGroup>
 
 </Project>

@@ -32,36 +32,29 @@ class Program
             milliSec.Clear();
         }*/
 
-        //2
-        /*var timer = new Stopwatch();
-        List<string> milliSec = new();
-        for (int z = 1; z <= 5; z++)
-        {
-            StreamWriter f = new StreamWriter($"..//..//..//results/2/2_1_{z}_result.txt", true);
-            for (int i = 1; i <= 100; i+=5)
-            {
-                for (int j = 1; j <= 100; j+=5)
-                {
-                    int[,] A = Generation.GetNewMatrix(i, j, 1, 9);
-                    int[,] B = Generation.GetNewMatrix(j, i, 1, 9);
-                    timer.Start();
-                    
-                    var resultAB = MatrixOperations.MultiplicationMatrix(A, B);
-                    
-                    timer.Stop();
-                    milliSec.Add(timer.Elapsed.TotalMilliseconds.ToString());
-                    
-                    timer.Stop();
-                }
-                f.WriteLine(String.Join(' ', milliSec));
-                milliSec.Clear();
-            }
-            f.Close();
-        }*/
+        //2 Умножение матриц
+        //var mult = new MatrixOperations();
+        //mult.ExecuteMultiplication();
+
+
+        //3 Сортировка расческой
         //var cs = new CombSort();
         //cs.Execute();
-        var polynom = new Polynom();
-        polynom.Execute();
+
+
+        //1.4.1
+        //var polynom = new Polynom();
+        //polynom.ExecuteP();
+
+
+        //1.4.2
+        //var polynom = new Polynom();
+        //polynom.ExecutePGorner();
+
+
+        //1.7 TimSort
+        var timSort = new TimSort();
+        timSort.Execute();
 
     }
 }
