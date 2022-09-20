@@ -15,11 +15,13 @@ namespace СomplexityOfAlgorithms.Algorithms
     {
         public void Execute()
         {
-            Console.WriteLine("Введите максимальную длину массива");
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали блочную сортировку.");
+            Console.WriteLine("Введите максимальную длину массива для генерации входных данных.");
             int maxLength = int.Parse(Console.ReadLine());
             for (int i = 1; i <= 5; i++)
             {
-                string path = $"..//..//..//results/III/QuickRecursiveSort_{i}.txt";
+                string path = $"..//..//..//results/III/BucketSort_{i}.txt";
                 StreamWriter f = new StreamWriter(path);
                 for (int j = 1; j <= maxLength; j += 5000)
                 {

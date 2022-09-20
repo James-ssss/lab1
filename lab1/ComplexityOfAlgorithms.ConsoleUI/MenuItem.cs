@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI
 {
-    internal interface IMenu
+    public class MenuItem
     {
-        public void Draw();
-
-        public void Prev();
-        public void Next();
-
+        public string Text { get; set; }
+        public int Id { get; set; }
     }
+
 }

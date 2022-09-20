@@ -18,24 +18,6 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI
 
             Console.SetCursorPosition(0, 0);
         }
-
-        public static bool GetYesNoAnswer()
-        {
-            var positiveAnswers = new[] { "y", "yes", "да" };
-            var negativeAnswers = new[] { "n", "no", "нет" };
-
-            string answer;
-            do
-            {
-                answer = Console.ReadLine();
-                if (!positiveAnswers.Contains(answer) && !negativeAnswers.Contains(answer))
-                {
-                    Console.WriteLine("Недопустимый ответ.");
-                }
-            } while (!positiveAnswers.Contains(answer) && !negativeAnswers.Contains(answer));
-
-            return positiveAnswers.Contains(answer);
-        }
     }
 
 }
