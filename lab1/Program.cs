@@ -2,23 +2,40 @@
 using System.Numerics;
 
 using lab1.Algorithms;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
+
 class Program
 { 
     static void Main()
     {
-        int maxLength = 1000000;
-        StreamWriter f = new StreamWriter("..//..//..//results/III/QuickRecursiveSort_5.txt");
-        for (int i = 1; i <= maxLength; i += 5000)
+        Console.CursorVisible = false;
+        MainMenu menu = new MainMenu();
+        do
         {
-            var v = VectorGeneration.GetNewVector(i, 1, 1000);
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            BucketSort.Sort(v);
-            stopwatch.Stop();
+            menu.Draw();
 
-            TimeSpan ts = stopwatch.Elapsed;
-            f.WriteLine(stopwatch.Elapsed.TotalMilliseconds);
-        }
-        f.Close();
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+            if (keyInfo.Key == ConsoleKey.DownArrow)
+            {
+                menu.Next();
+            }
+            else if (keyInfo.Key == ConsoleKey.UpArrow)
+            {
+                menu.Prev();
+            }
+            else if (keyInfo.Key == ConsoleKey.Enter)
+            {
+                menu.Select();
+
+                Console.WriteLine("Хотите продолжить? y/n");
+                string answer = Console.ReadLine();
+                if (answer == "n" || answer == "no")
+                {
+                    break;
+                }
+            }
+        } while (true);
+
     }
 }
