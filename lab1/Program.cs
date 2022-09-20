@@ -38,8 +38,8 @@ class Program
 
 
         //3 Сортировка расческой
-        //var cs = new CombSort();
-        //cs.Execute();
+        var cs = new CombSort();
+        cs.Execute();
 
 
         //1.4.1
@@ -53,8 +53,8 @@ class Program
 
 
         //1.7 TimSort
-        var timSort = new TimSort();
-        timSort.Execute();
+        //var timSort = new TimSort();
+        //timSort.Execute();
 
     }
 }
