@@ -4,6 +4,7 @@ using System.Numerics;
 using СomplexityOfAlgorithms.Algorithms;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core.Algorithms;
 
 class Program
 {
@@ -22,6 +23,7 @@ class Program
     const string ConstantFunction = "Постоянная функция";
     const string SumOfElements = "Сумма элементов";
     const string ProductOfElements = "Произведение элементов";
+    const string TimSort = "TimSort";
     const string Exit = "Выход";
     static void Main(string[] args)
     {
@@ -31,18 +33,19 @@ class Program
                 new MenuItem{Title = ConstantFunction},
                 new MenuItem{Title = SumOfElements},
                 new MenuItem{Title = ProductOfElements},
-                new MenuItem{Title = BucketSort},
+                new MenuItem{Title = PlynomialCalculation},
+                new MenuItem{Title = PolynomialCalculationByHorner},
+                new MenuItem{Title = BubbleSort},
+                new MenuItem{Title = QuickSort},
+                new MenuItem{Title = TimSort},
                 new MenuItem{Title = SimpleExponentiation},
                 new MenuItem{Title = RecursiveExponentiation},
                 new MenuItem{Title = QuickExponentiation},
                 new MenuItem{Title = ClassicQuickExponentiation},
-                new MenuItem{Title = CombSort},
-                new MenuItem{Title = PlynomialCalculation},
-                new MenuItem{Title = PolynomialCalculationByHorner},
                 new MenuItem{Title = MatrixMultiplication},
-                new MenuItem{Title = BubbleSort},
+                new MenuItem{Title = BucketSort},
+                new MenuItem{Title = CombSort},
                 new MenuItem{Title = InsertionSort},
-                new MenuItem{Title = QuickSort},
                 new MenuItem{Title = Exit},
             };
 
@@ -118,6 +121,11 @@ class Program
                             bs.Execute();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
+                        case TimSort:
+                            TimSort ts = new TimSort();
+                            ts.Execute();
+                            BaseMenu.ReturnToMainMenu(mainMenu, index);
+                            break;
                         case InsertionSort:
                             InsertionSort iss = new InsertionSort();
                             iss.Execute();
@@ -129,18 +137,18 @@ class Program
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case ConstantFunction:
-                            BubbleSort cf = new BubbleSort();
-                            cf.Execute();
+                            VectorOperations v = new VectorOperations();
+                            v.ExecuteConst();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case SumOfElements:
-                            InsertionSort sof = new InsertionSort();
-                            sof.Execute();
+                            VectorOperations vo = new VectorOperations();
+                            vo.ExecuteSum();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case ProductOfElements:
-                            QuickSort pof = new QuickSort();
-                            pof.Execute();
+                            VectorOperations vos = new VectorOperations();
+                            vos.ExecuteMul();
                             BaseMenu.ReturnToMainMenu(mainMenu, index);
                             break;
                         case Exit:

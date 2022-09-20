@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using СomplexityOfAlgorithms.ComplexityOfAlgorithms.ConsoleUI;
 
 namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
 {
@@ -32,15 +33,17 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
         }
         public void ExecuteMultiplication()
         {
-           var timer = new Stopwatch();
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Вы выбрали перемножение матриц.");
+            var timer = new Stopwatch();
            List<string> milliSec = new();
            for (int z = 1; z <= 5; z++)
            {
                StreamWriter f = new StreamWriter($"..//..//..//results/2/2_1_{z}_result.txt", true);
-               for (int i = 1; i <= 500; i+=25)
+               for (int i = 1; i <= 100; i+=5)
                { 
                
-                   for (int j = 1; j <= 500; j+=25)
+                   for (int j = 1; j <= 100; j+=5)
                    {
                        int[,] A = Generation.GetNewMatrix(i, j, 1, 9);
                        int[,] B = Generation.GetNewMatrix(j, i, 1, 9);
@@ -55,6 +58,8 @@ namespace СomplexityOfAlgorithms.ComplexityOfAlgorithms.Core
                }
                f.Close();
            }
+            ConsoleHelper.ClearScreen();
+            Console.WriteLine("Файлы успешно созданы");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace lab1.Algorithms
             List<string> milliSec = new();
             for (int j = 1; j <= 5; j++)
             {
-                for (int k = 1; k < 1000000; k +=5000)
+                for (int k = 1; k < 100000; k +=5000)
                 {
                     int[] vector = Generation.GetNewVector(k, 1, 10000);
                     timer.Start();
